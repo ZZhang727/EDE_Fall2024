@@ -26,11 +26,11 @@ Enter answers to the questions just below the >Answer: prompt.
 
 2. Are there any components of the course about which you feel confident?
 
-> Answer: I feel con
+> Answer: I feel confident about the linear model part of the course. I've done some projects with R's linear model with the analyses on probabilities. I also know how to report a result to 
 
 3. Are there any components of the course about which you feel apprehensive?
 
-> Answer: 
+> Answer: I feel apprehensive about
 
 
 ## 2) GitHub
