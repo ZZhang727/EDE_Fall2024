@@ -53,25 +53,26 @@ Add comments below to indicate what each operation does.(First answer is provide
 # Returns the 3rd item in the vector
 vector1[3]
 
-#
+#It is the third number in vector1, which is 5.3
 max(vector1)
+
 
 #Create another vector of the values 10 thru 15
 vector4 <- c(10:15)
 
-#
+#Combine vector1 and vector4, the little c means "combine"
 c(vector1, vector4)
 
-#
+#first*first, 2nd*2nd.....
 vector1 * vector4
 
-#
+#Multiple all numbers by 10 
 vector1 * 10
 
-#
+#Convert all to upper case:
 toupper(vector2) 
 
-#
+#!means negative, which is opposite of what we did before
 !vector3
 
 ```
@@ -84,15 +85,15 @@ Find a 5-day forecast of temperatures (Fahrenheit) for Durham, North Carolina. C
 
 #Assign to the variable 'temps_F' a vector of high temperatures in F
 
-
+temps_F <-c(80,80,80,74,74)
 #What is the average of these temperatures 
-
+meanF <- mean(temps_F)
 
 #Compute the difference between each temperature and the average calculated above
-
+temps_F - meanF
 
 #Subtract 32 and multiply by 5/9ths to create a vector in Celsius
-
+temps_C <-(temps_F-32) * 5/9
 
 ```
 
@@ -117,8 +118,10 @@ matrix3 <- matrix(
   dimnames = list(
     c("uno", "dos", "tres", "quatro", "cinco"),
     c("un", "deux", "trois", "quatre")
-    )
-  ) 
+    ))
+
+  matrix3
+
 
 ```
 
@@ -163,7 +166,7 @@ matrix4['R2','C1']
 ### Exercise 1b: Matrices
 Compute the mean of column "C2" in matrix4. (Should be 14.5)
 ```{r Matrix Exercise}
-
+mean(matrix4[,'C2'])
 ```
 
 
@@ -215,6 +218,7 @@ e <- c("red", "white", "red", NA) # What type of vector?
 f <- c(TRUE, TRUE, TRUE, FALSE) # What type of vector?
 
 #Combine the vectors into a dataframe
+#Dataframe needs to have the same number of rows
 dataframe1 <- data.frame(d,e,f) 
 
 #Set the column names & View
@@ -248,3 +252,4 @@ out2 <- dataframe1$Color; class(out2)
 out3 <- dataframe1[c("ID","Passed")]; class(out3)
 
 ```
+

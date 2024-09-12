@@ -50,7 +50,8 @@ Is the new object you create a data frame?
 class(car_speed)
 
 #Option 2
-is.data.frame(car_speed)
+is.data.frame(car_speed) #Check is car_speed a data frame?
+                         #False. It is not a data frame.
 ```
 
 How could you make it a data frame?
@@ -94,7 +95,7 @@ How would you create a data frame?
 
 ```{r}
 #useful function data.frame()
-create_df <- data.frame("speed"=car_speed,"dist"=car_dist)
+create_df <- data.frame("speed"=car_speed,"dist"=car_dist) #column
 create_df
 ```
 
