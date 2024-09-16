@@ -1,0 +1,118 @@
+---
+title: "Assignment 2: Coding Basics"
+author: "Zhaoxin Zhang"
+output: pdf_document
+geometry: margin=2.54cm
+editor_options: 
+  chunk_output_type: console
+---
+
+## OVERVIEW
+
+This exercise accompanies the lessons/labs in Environmental Data Analytics on coding basics.
+
+## Directions
+
+1.  Rename this file `<FirstLast>_A02_CodingBasics.Rmd` (replacing `<FirstLast>` with your first and last name).
+2.  Change "Student Name" on line 3 (above) with your name.
+3.  Work through the steps, **creating code and output** that fulfill each instruction.
+4.  Be sure to **answer the questions** in this assignment document.
+5.  When you have completed the assignment, **Knit** the text and code into a single PDF file.
+6.  After Knitting, submit the completed exercise (PDF file) to Canvas.
+
+## Basics, Part 1
+
+1.  Generate a sequence of numbers from one to 55, increasing by fives. Assign this sequence a name.
+```{r}
+Sequence_1_to_55 <- seq(1, 55, 5)
+#from 1, to 55, by 5
+Sequence_1_to_55
+```
+
+2.  Compute the mean and median of this sequence.
+```{r}
+SequenceMean <- mean(Sequence_1_to_55)
+SequenceMedian <- median(Sequence_1_to_55)
+SequenceMean
+SequenceMedian
+```
+
+3.  Ask R to determine whether the mean is greater than the median.
+```{r}
+SequenceMean>SequenceMedian
+```
+
+4.  Insert comments in your code to describe what you are doing.
+
+```{r basics 1}
+
+#1. Use the seq() to build a sequence from one to 55. The three numbers seperated by commas are "from", "to" and "by". So seq(1,55,5) means from 1, to 55, by 5. Print the Sequence_1_to_55, R will show what the sequence looks like. 
+#2. Create two vectors named "SequenceMean" and "SequenceMedian" to represent the mean and median of the sequence. Print the vector and get the mean and median.
+#3. Compare the mean and median to see if the mean is greather than the median. If it is greater, the printed result will be TRUE, if it is not, the printed result will be FALSE. In the Console we can see a FALSE, which means that the mean is not greater than the median.
+
+```
+
+## Basics, Part 2
+
+5.  Create three vectors, each with four components, consisting of (a) student names, (b) test scores, and (c) whether they are on scholarship or not (TRUE or FALSE).
+
+6.  Label each vector with a comment on what type of vector it is.
+
+7.  Combine each of the vectors into a data frame. Assign the data frame an informative name.
+
+8.  Label the columns of your data frame with informative titles.
+
+```{r basics 2}
+Names <- c("Alex","Betty","Carol")
+Names
+#
+Scores <- c(88, 98, 90)
+Scores
+#
+Scholarship <- c(FALSE, TRUE, FALSE)
+Scholarship
+#
+class(Names)
+class(Scores)
+class(Scholarship)
+#None of them is data frame
+#Combine these data frames
+StudentList <- data.frame("Name"=Names,"Score"=Scores, "Scholarship"=Scholarship) #column
+StudentList
+#Check if the "StudentList" a dataframe
+class(StudentsList)
+#Yes
+```
+
+9.  QUESTION: How is this data frame different from a matrix?
+
+> Answer: A matrix is a 2 dimensional structure that can only contains elements of the same type (e.g., numeric, characters, etc). A data frame is also a 2 dimensional structure, but its columns can have different modes (e.g., numeric, factor, characters, etc). 
+
+10. Create a function with one input. In this function, use `if`...`else` to evaluate the value of the input: if it is greater than 50, print the word "Pass"; otherwise print the word "Fail". 
+
+11. Create a second function that does the exact same thing as the previous one but uses `ifelse()` instead if `if`...`else `. 
+
+12. Run both functions using the value 52.5 as the input
+
+13. Run both functions using the **vector** of student test scores you created as the input. (Only one will work properly...)
+
+```{r basics 3}
+#10. Create a function using if...else
+
+#11. Create a function using ifelse()
+
+#12a. Run the first function with the value 52.5
+
+#12b. Run the second function with the value 52.5
+
+#13a. Run the first function with the vector of test scores
+
+#13b. Run the second function with the vector of test scores
+```
+
+14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
+
+> Answer:
+
+
+**NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
