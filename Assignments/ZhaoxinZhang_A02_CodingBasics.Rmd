@@ -55,33 +55,38 @@ SequenceMean>SequenceMedian
 ## Basics, Part 2
 
 5.  Create three vectors, each with four components, consisting of (a) student names, (b) test scores, and (c) whether they are on scholarship or not (TRUE or FALSE).
+```{r}
+a <- c("Alex","Betty","Carol","Dave")
+a
+b <- c(88, 98, 90, 86)
+b
+c <- c(FALSE, TRUE, FALSE, FALSE)
+c
+```
 
 6.  Label each vector with a comment on what type of vector it is.
+```{r}
+class(a)
+#The vector "a" is classified as "character"
+class(b)
+#The vector "b" is classified as "numeric"
+class(c)
+#The vector "c" is classified as "logical"
+```
 
 7.  Combine each of the vectors into a data frame. Assign the data frame an informative name.
+```{r}
+#None of them is data frame
+#Combine these vectors into a data frame
+StudentList <- data.frame(a,b,c)
+StudentList
+```
 
 8.  Label the columns of your data frame with informative titles.
 
 ```{r basics 2}
-Names <- c("Alex","Betty","Carol")
-Names
-#
-Scores <- c(88, 98, 90)
-Scores
-#
-Scholarship <- c(FALSE, TRUE, FALSE)
-Scholarship
-#
-class(Names)
-class(Scores)
-class(Scholarship)
-#None of them is data frame
-#Combine these data frames
-StudentList <- data.frame("Name"=Names,"Score"=Scores, "Scholarship"=Scholarship) #column
-StudentList
-#Check if the "StudentList" a dataframe
-class(StudentsList)
-#Yes
+#Set the column names & View
+names(StudentList) <- c("Names","Scores","Scholarship"); View(StudentList)
 ```
 
 9.  QUESTION: How is this data frame different from a matrix?
@@ -98,21 +103,37 @@ class(StudentsList)
 
 ```{r basics 3}
 #10. Create a function using if...else
+FunctionQ10 <- function(x) {
+  if (x > 50) {
+    print("Pass")
+  } else {
+    print("Fail")
+  }
+}
 
 #11. Create a function using ifelse()
+FunctionQ11 <- function(x) {
+  ifelse(x > 50, "Pass", "Fail")
+  
+}
 
 #12a. Run the first function with the value 52.5
+FunctionQ10(52.5)
 
 #12b. Run the second function with the value 52.5
+FunctionQ11(52.5)
 
 #13a. Run the first function with the vector of test scores
+FunctionQ10(Scores)
 
 #13b. Run the second function with the vector of test scores
+FunctionQ11(Scores)
+
 ```
 
 14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
 
-> Answer:
+> Answer: The `ifelse` worked while the `if`...`else` did not work. 
 
 
 **NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
