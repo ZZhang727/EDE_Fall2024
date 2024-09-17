@@ -125,15 +125,16 @@ FunctionQ11(52.5)
 
 #13a. Run the first function with the vector of test scores
 FunctionQ10(Scores)
+#This one does not work
 
 #13b. Run the second function with the vector of test scores
 FunctionQ11(Scores)
-
+#This one works
 ```
 
 14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
 
-> Answer: The `ifelse` worked while the `if`...`else` did not work. 
+> Answer: The function using`ifelse` worked while the function using`if`...`else` did not work. The reason is that for FunctionQ10 which using `if`...`else`, there are more than one vector conditions. The x > 50 is a vector, while the "else" give another vector. Thus, the function() cannot run two vector conditions at one time. If we vectorized it by using `ifelse`, the new function will have one vector condition which's length equals to 1. As a result, the `ifelse` function works.
 
 
 **NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
