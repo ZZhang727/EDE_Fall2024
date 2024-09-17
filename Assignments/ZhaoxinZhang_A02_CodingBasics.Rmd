@@ -44,13 +44,13 @@ SequenceMean>SequenceMedian
 
 4.  Insert comments in your code to describe what you are doing.
 
-```{r basics 1}
 
-#1. Use the seq() to build a sequence from one to 55. The three numbers seperated by commas are "from", "to" and "by". So seq(1,55,5) means from 1, to 55, by 5. Print the Sequence_1_to_55, R will show what the sequence looks like. 
-#2. Create two vectors named "SequenceMean" and "SequenceMedian" to represent the mean and median of the sequence. Print the vector and get the mean and median.
-#3. Compare the mean and median to see if the mean is greather than the median. If it is greater, the printed result will be TRUE, if it is not, the printed result will be FALSE. In the Console we can see a FALSE, which means that the mean is not greater than the median.
+1. Use the seq() to build a sequence from one to 55. The three numbers seperated by commas are "from", "to" and "by". So seq(1,55,5) means from 1, to 55, by 5. Print the Sequence_1_to_55, R will show what the sequence looks like. 
 
-```
+2. Create two vectors named "SequenceMean" and "SequenceMedian" to represent the mean and median of the sequence. Print the vector and get the mean and median.
+
+3. Compare the mean and median to see if the mean is greater than the median. If it is greater, the printed result will be TRUE, if it is not, the printed result will be FALSE. In the Console we can see a FALSE, which means that the mean is not greater than the median.
+
 
 ## Basics, Part 2
 
@@ -85,8 +85,7 @@ StudentList
 8.  Label the columns of your data frame with informative titles.
 
 ```{r basics 2}
-#Set the column names & View
-names(StudentList) <- c("Names","Scores","Scholarship"); View(StudentList)
+names(StudentList) <- c("Names","Scores","Scholarship"); print(StudentList)
 ```
 
 9.  QUESTION: How is this data frame different from a matrix?
@@ -124,11 +123,11 @@ FunctionQ10(52.5)
 FunctionQ11(52.5)
 
 #13a. Run the first function with the vector of test scores
-FunctionQ10(Scores)
+
 #This one does not work
 
 #13b. Run the second function with the vector of test scores
-FunctionQ11(Scores)
+FunctionQ11(b)
 #This one works
 ```
 
