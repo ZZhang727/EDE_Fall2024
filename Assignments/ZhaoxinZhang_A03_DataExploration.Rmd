@@ -34,7 +34,7 @@ This exercise accompanies the lessons in Environmental Data Analytics on Data Ex
 
 ```{r,  message = FALSE}
 #Import packages
-library(tidyverse); library(lubridate); library(here);library(ggplot2)
+library(tidyverse); library(lubridate); library(here); library(ggplot2)
 
 #Check work directory
 here()
@@ -91,7 +91,10 @@ sort(summary(Neonics$Effect))
 ```{r}
 summary(Neonics$Species.Common.Name) #Summarize the data
 help(summary) #Check what maxsum means
-summary(Neonics$Species.Common.Name, maxsum = 7 ) #The question is asking for the six most commonly studied species, we make the levels of 7 because there would be one level shows "Other" besides the six most commonly studied species.
+summary(Neonics$Species.Common.Name, maxsum = 7 ) 
+#The question is asking for the six most commonly studied species
+#We make the levels of 7
+#because there would be one level shows "Other" besides the six most commonly studied species.
 ```
 
 > Answer: All of the six most commonly studied species are belong to the Apocrita suborder (wasps and bees). Studies show that neonicotinoids not only kill pests but also many other kinds of insects, especially bees. Therefore, researchers might want to know how the neonicotinoids can hurt bees and wasps, which are not targeted pest but are important to the ecosystem and food chain.
@@ -158,7 +161,7 @@ length(unique(Litter$plotID))
 length(summary(Litter$plotID))
 ```
 
-> Answer: The 'unique' only lists each plot's ID and how many different plots, without showinbg other information, while the 'summary'shows not only each plot's ID but also the number of each plot. However, the summary does not directly give the levels of the plot's ID, we need to account it one by one. If we use 'length', we can directly see how many different plots were sampled.
+> Answer: The 'unique' only lists each plot's ID and how many different plots, without showinbg other information, while the 'summary'shows not only each plot's ID but also the number of each plot. However, the summary does not directly give the levels of the plot's ID, we need to count it one by one. If we use 'length', we can directly see how many different plots were sampled.
 
 14. Create a bar graph of functionalGroup counts. This shows you what type of litter is collected at the Niwot Ridge sites. Notice that litter types are fairly equally distributed across the Niwot Ridge sites.
 
