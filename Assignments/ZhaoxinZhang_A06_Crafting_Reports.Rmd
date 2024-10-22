@@ -144,3 +144,4 @@ Add a table of contents and list of figures to your document and knit to a PDF. 
 
 ## Git Repository
 https://github.com/ZZhang727/EDE_Fall2024/tree/main/Assignments
+
