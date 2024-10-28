@@ -26,18 +26,18 @@ Enter answers to the questions just below the >Answer: prompt.
 
 2. Are there any components of the course about which you feel confident?
 
-> Answer: I feel confident about the linear model part of the course. I've done some projects with R's linear model with the analyses on probabilities. I also know how to report a result to 
+> Answer: I feel confident about the linear model part of the course. I've done some projects with R's linear model with the analyses on probabilities. I also know how to report a quantitative result to the audience. 
 
 3. Are there any components of the course about which you feel apprehensive?
 
-> Answer: I feel apprehensive about
+> Answer: I feel apprehensive about the geometric part. I have statistical analysis experience, but I am not very familiar with geometry. 
 
 
 ## 2) GitHub
 
 Provide a link below to your forked course repository in GitHub. Make sure you have pulled all recent changes from the course repository and that you have updated your course README file, committed those changes, and pushed them to your GitHub account. 
 
-> Answer: 
+> Answer: https://github.com/ZZhang727/EDE_Fall2024/tree/main
 
 ## 3) Knitting
 When you have completed this document, click the `knit` button.This should produce a PDF copy of your markdown document. Submit this PDF to Canvas 

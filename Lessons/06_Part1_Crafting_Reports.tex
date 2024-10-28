@@ -1,0 +1,441 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Crafting Reports},
+  pdfauthor={John Fay \& Luana Lima},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Crafting Reports}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{ENV 859 - Environmental Data Exploration}
+\author{John Fay \& Luana Lima}
+\date{Fall 2024}
+
+\begin{document}
+\maketitle
+
+\subsection{R Markdown}\label{r-markdown}
+
+\subsubsection{Subheader}\label{subheader}
+
+\begin{quote}
+This is a block quote
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Step1
+\item
+  Setp2
+\item
+  Step3
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  First bullet
+\item
+  Second bullet
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Subbullet
+  \end{itemize}
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+First Header & Second Header \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Content Cell & Content Cell \\
+s & Content Cell \\
+\end{longtable}
+
+\begin{figure}
+\centering
+\includegraphics{img/rmarkdownflow.png}
+\caption{image link}
+\end{figure}
+
+\subsection{Learning Outcomes}\label{learning-outcomes}
+
+\begin{itemize}
+\tightlist
+\item
+  Explain why we use RMarkdown \& knit to PDF
+\item
+  Navigate YAML \& use it to enhance to your documents
+\item
+  Control how \emph{code} appears in knit output:\\
+  code chunk setting s
+\item
+  Control how \emph{text} appears in knit output:\\
+  markdown techniques
+\item
+  Understand the knitting process and\\
+  how it converts Rmd to PDF, HTML, etc.
+\end{itemize}
+
+\subsection{Use of RStudio \& RMarkdown so
+far\ldots{}}\label{use-of-rstudio-rmarkdown-so-far}
+
+\begin{itemize}
+\tightlist
+\item
+  We have provided you with Rmd files
+\item
+  Write/edit code (code chunks)
+\item
+  Document that code (text blocks)
+\item
+  Generate PDFs of code and its outputs
+\item
+  Integrate with Git/GitHub for version control
+\end{itemize}
+
+\subsection{Advantanges of RMarkdown}\label{advantanges-of-rmarkdown}
+
+\subsubsection{Why do we use RMarkdown?}\label{why-do-we-use-rmarkdown}
+
+\begin{itemize}
+\tightlist
+\item
+  Written in basic text (fully reproducible)
+\item
+  Works well with version control
+\item
+  Allows for code and documentation in one file
+\item
+  When knit, can produce tidy output in many file formats
+\end{itemize}
+
+\subsection{RMarkdown: A deeper look}\label{rmarkdown-a-deeper-look}
+
+\subsubsection{The three components of
+RMarkdown}\label{the-three-components-of-rmarkdown}
+
+\begin{itemize}
+\tightlist
+\item
+  YAML
+\item
+  Text (markdown)
+\item
+  Code (R or ???)
+\end{itemize}
+
+\subsection{YAML: What is it?}\label{yaml-what-is-it}
+
+\begin{itemize}
+\tightlist
+\item
+  ``Yet another markdown language''\\
+  ``YAML ain't markdown language''
+\item
+  Always at the beginning of an Rmd
+\item
+  Enclosed by three dashes \texttt{-\/-\/-}
+\item
+  Includes instructions applied when knitting
+\item
+  Instructions take the form of \texttt{key}:\texttt{value} pairs
+\end{itemize}
+
+\subsection{YAML, An Exercise}\label{yaml-an-exercise}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a new Rmd in R
+\item
+  Set the title, author, date
+\item
+  Set output to be PDF
+\item
+  View the YAML in the Rmd produced
+\item
+  Knit the document \& view the PDF
+\item
+  Add new entries:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{subtitle:\ "A\ draft\ copy"}
+  \item
+    \texttt{toc:\ true}
+  \end{itemize}
+\item
+  Add a few markdown headers (\texttt{\#\#})
+\item
+  Knit and view\ldots{}
+\end{enumerate}
+
+\subsection{YAML, A Recap}\label{yaml-a-recap}
+
+\begin{itemize}
+\tightlist
+\item
+  YAML setting apply to the entire document
+\item
+  YAML is read in the knit process
+\item
+  YAML has even more advanced settings\\
+  \href{https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf}{Markdown
+  Cheat sheet}\\
+  \url{https://bookdown.org/yihui/rmarkdown/pdf-document.html}
+\end{itemize}
+
+\subsection{The knitting process}\label{the-knitting-process}
+
+\begin{itemize}
+\tightlist
+\item
+  The knitting sequence
+  \href{https://env872.github.io/assets/images/rmarkdownflow.png}{\includegraphics{img/rmarkdownflow.png}}
+\item
+  \texttt{Rmd}→{[}\emph{knitr}{]}→\texttt{md}:\\
+  Guided by instructions in YAML \& Code chunks
+\item
+  \texttt{md}→{[}\emph{Pandoc}{]}→\texttt{PDF}:\\
+  Markdown translated into PDF\textbar HTML\textbar Word\textbar\ldots{}
+  by Pandoc
+\item
+  Example\ldots{}
+\end{itemize}
+
+\subsection{Code Chunks: Recap}\label{code-chunks-recap}
+
+\begin{itemize}
+\tightlist
+\item
+  Where code is executed
+\item
+  Surrounded by triplets of tics:
+  \texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\item
+  Chunks have attributes, set within \texttt{\{\ \ \}}\\
+  For example: \texttt{\{r\ plot\ AQI,\ echo=FALSE\}}
+\end{itemize}
+
+\subsection{Code Chunks: Example}\label{code-chunks-example}
+
+\begin{itemize}
+\tightlist
+\item
+  Shortcuts to create
+\item
+  Coding languages
+\item
+  Setting chunk attributes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://yihui.org/knitr/options/\#chunk-options}
+  \item
+    \url{https://bookdown.org/yihui/rmarkdown/r-code.html}
+  \end{itemize}
+\item
+  Global code chunk attributes\\
+  \texttt{knitr::opts\_chunk\$set(echo\ =\ TRUE)}
+\end{itemize}
+
+\subsection{Code Chunks: Plots and
+Figures}\label{code-chunks-plots-and-figures}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{fig.cap}: Set figure Caption
+\item
+  \texttt{fig.width}, \texttt{fig.height}: Set figure size, or\ldots{}
+\item
+  \texttt{fig.dim} to set both (e.g.~\texttt{fig.dim\ =\ c(5,3)})
+\item
+  \texttt{out.width}, \texttt{out.height}: scale figs in output docs\\
+  e.g.~\texttt{out.width=80\%} to set at 80\% of page width
+\item
+  \texttt{fig.align}: set alignment (`left', `center', etc.)
+\end{itemize}
+
+\subsection{Markdown: Recap}\label{markdown-recap}
+
+\subsubsection{Common stylings:}\label{common-stylings}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\#}: headings
+\item
+  \texttt{\textgreater{}}: block quotes
+\item
+  Ordered and unordered lists\ldots{}
+\item
+  Hyperlinks\ldots{}
+\end{itemize}
+
+\subsection{Markdown: Documentation}\label{markdown-documentation}
+
+\begin{itemize}
+\tightlist
+\item
+  Quick reference
+\item
+  Cheatsheet
+\item
+  Reference Guide
+\end{itemize}
+
+\subsection{Markdown: Exercises}\label{markdown-exercises}
+
+\begin{itemize}
+\tightlist
+\item
+  Creating tables
+\item
+  Inserting images
+\item
+  Additional text formatting
+\end{itemize}
+
+\subsection{Markdown: Useful
+techniques}\label{markdown-useful-techniques}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\textbackslash{}newpage}
+\item
+  \texttt{\textbackslash{}listoftables}
+\item
+  \texttt{\textbackslash{}listoffigurres}
+\item
+  \texttt{-\/-\/-}
+\item
+  Using the \emph{Visual Editor}!
+\end{itemize}
+
+\subsection{\texorpdfstring{Pretty tables with
+\texttt{kable}}{Pretty tables with kable}}\label{pretty-tables-with-kable}
+
+\begin{itemize}
+\tightlist
+\item
+  Part of the \texttt{knitr} package
+\item
+  Convert a dataframe to a markdown table\\
+  Makes for aethetic output
+\item
+  Example\ldots{}
+\end{itemize}
+
+\subsection{Exercises!}\label{exercises}
+
+\begin{itemize}
+\tightlist
+\item
+  Open \texttt{06Exercise\_Markdown.Rmd} and knit as is
+\item
+  Add a table of contents
+\item
+  Set the first code chunk to run, but:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    code is not shown in knit output
+  \item
+    warnings are not shown in output
+  \end{itemize}
+\item
+  Show summary dataframes as tables (using \texttt{kable})
+\item
+  Add a list of tables using \texttt{\textbackslash{}listoftables}
+\end{itemize}
+
+\end{document}

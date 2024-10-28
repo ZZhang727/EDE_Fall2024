@@ -1,0 +1,27 @@
+---
+title: Interactive Rmd
+output: html_document
+runtime: shiny
+---
+  
+```{r, echo = FALSE}
+numericInput(
+  inputId ="n",
+  label="Tell me how many cars?", 
+  value=15
+  )
+
+numericInput(
+  inputId ="x",
+  label="Tell me how many cars?", 
+  value=15
+  )
+
+
+
+renderTable(
+  {
+    head(cars, input$x)
+})
+```
+

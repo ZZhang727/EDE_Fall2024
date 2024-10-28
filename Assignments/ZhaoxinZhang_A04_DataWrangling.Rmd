@@ -181,6 +181,8 @@ Air_Quality_201819_new <- Air_Quality_201819 %>%
             Latitude_mean = mean(SITE_LATITUDE),
             Longitude_mean = mean(SITE_LONGITUDE)) #summarise the means
 
+glimpse(Air_Quality_201819_new)
+
 
 #9
 Air_Quality_201819_new_2 <- Air_Quality_201819_new %>%

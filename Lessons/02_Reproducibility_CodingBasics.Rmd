@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 title: "2: Reproducibility and Coding Basics"
 subtitle: "Environmental Data Analytics"
 author: "John Fay and Luana Lima | Developed by Kateri Salk"
@@ -205,6 +210,7 @@ recipe3 <- function(x, f){
 doublecomplexmeal <- recipe3(x = 5, f = 2)
 doublecomplexmeal
 doublecomplexmeal$mix1
+doublecomplexmeal$mix2
 ```
 
 Make a recipe based on the ingredients you have

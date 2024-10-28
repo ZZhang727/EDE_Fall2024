@@ -105,7 +105,7 @@ summary(Neonics$Species.Common.Name, maxsum = 7 )
 class(Neonics$Conc.1..Author.)
 ```
 
-> Answer: The "Conc.1..Author." is classified as factor. It is not numeric becasue it includes ranges such as smaller/bigger than specific numbers instead of just numbers, and it includes some special figures such as "<"">" which are not numeric. 
+> Answer: The "Conc.1..Author." is classified as factor. It is not numeric becasue it includes ranges such as smaller/bigger than specific numbers instead of just numbers, and it includes some special figures such as "<"">" "/" which are not numeric. 
 
 ## Explore your data graphically (Neonics)
 
@@ -114,7 +114,7 @@ class(Neonics$Conc.1..Author.)
 ```{r}
 ggplot(Neonics)+
   geom_freqpoly(aes(x=Publication.Year), bins = 10)
-#The bin is 10, showing the number of publications in each decade.
+#The bin is 10, showing the number of publications in around each three to five years.
 ```
 
 10. Reproduce the same graph but now add a color aesthetic so that different Test.Location are displayed as different colors.

@@ -1,8 +1,9 @@
 ---
 title: "Lab 2 - Data Structures in R"
-subtitle: "Environmental Data Analytics"
 author: "John Fay & Luana Lima"
 date: "Fall 2024"
+output: pdf_document
+subtitle: Environmental Data Analytics
 ---
 
 ## Objective
@@ -55,7 +56,6 @@ vector1[3]
 
 #It is the third number in vector1, which is 5.3
 max(vector1)
-
 
 #Create another vector of the values 10 thru 15
 vector4 <- c(10:15)
